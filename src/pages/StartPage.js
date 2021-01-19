@@ -18,33 +18,31 @@ export default function StartPage({ navigation }) {
   }
 
   return (
-    <View>
-      <Wrapper>
-        <Content>
-          <TitleContainer>
-            <PreTitle>Welkom bij de</PreTitle>
-            <Title>Stemwijzer</Title>
-            <TouchableOpacity onPress={() => toAboutPage()}>
-              <AfterTitle>Wat is de stemwijzer?</AfterTitle>
-            </TouchableOpacity>
-          </TitleContainer>
+    <Wrapper>
+      <Content>
+        <TitleContainer>
+          <PreTitle>Welkom bij de</PreTitle>
+          <Title>Stemwijzer</Title>
+          <TouchableOpacity onPress={() => toAboutPage()}>
+            <AfterTitle>Wat is de stemwijzer?</AfterTitle>
+          </TouchableOpacity>
+        </TitleContainer>
 
-          <CenterContainer>
-            <CenterText>Klik op start om de test te beginnen</CenterText>
-          </CenterContainer>
+        <CenterContainer>
+          <CenterText>Klik op start om de test te beginnen</CenterText>
+        </CenterContainer>
 
-          <BottomContainer>
-            <TouchableOpacity onPress={() => toQuestionPage()}>
-              <Button>Start de test!</Button>
-            </TouchableOpacity>
-          </BottomContainer>
-        </Content>
+        <BottomContainer>
+          <TouchableOpacity onPress={() => toQuestionPage()}>
+            <Button>Start de test!</Button>
+          </TouchableOpacity>
+        </BottomContainer>
+      </Content>
 
-        <FooterContainer>
-          <FooterImage source={require("../../assets/background_image.jpg")} />
-        </FooterContainer>
-      </Wrapper>
-    </View>
+      <FooterContainer>
+        <FooterImage source={require("../../assets/background_image.jpg")} />
+      </FooterContainer>
+    </Wrapper>
   )
 }
 
