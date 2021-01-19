@@ -63,7 +63,7 @@ const Content = styled.View`
 `
 
 const TitleContainer = styled.View`
-  flex: 0 0 25%;
+  flex: 0 0 33%;
   width: 70%;
   margin-top: 5rem;
 `
