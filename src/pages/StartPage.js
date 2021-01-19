@@ -1,12 +1,7 @@
 import React from "react"
 import { Text, View, Image, TouchableOpacity } from "react-native"
 
-// import Style from "../style/pages/StartPage"
 import styled from "styled-components/native"
-
-// const container = Style.container
-// const contentContainer = Style.contentContainer
-// const imageContainer = Style.imageContainer
 
 export default function StartPage({ navigation }) {
   function toAboutPage() {
@@ -82,6 +77,7 @@ const AfterTitle = styled.Text`
 `
 
 const CenterContainer = styled.View`
+  width: 70%;
   flex: 0 0 33%;
   margin-top: 5rem;
 `
