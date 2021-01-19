@@ -34,7 +34,7 @@ export default function StartPage({ navigation }) {
 
         <BottomContainer>
           <TouchableOpacity onPress={() => toQuestionPage()}>
-            <Button>Start de test!</Button>
+            <StartButton>Start de test!</StartButton>
           </TouchableOpacity>
         </BottomContainer>
       </Content>
@@ -97,7 +97,7 @@ const BottomContainer = styled.View`
   margin-top: 5rem;
 `
 
-const Button = styled.Text`
+const StartButton = styled.Text`
   font-size: 1.5rem;
   background: #025c7e;
   padding: 1rem 2rem;
