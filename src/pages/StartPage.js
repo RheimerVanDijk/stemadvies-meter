@@ -20,13 +20,13 @@ export default function StartPage({ navigation }) {
   return (
     <Wrapper>
       <Content>
-        <TitleContainer>
+        <TopContainer>
           <PreTitle>Welkom bij de</PreTitle>
           <Title>Stemwijzer</Title>
           <TouchableOpacity onPress={() => toAboutPage()}>
             <AfterTitle>Wat is de stemwijzer?</AfterTitle>
           </TouchableOpacity>
-        </TitleContainer>
+        </TopContainer>
 
         <CenterContainer>
           <CenterText>Klik op start om de test te beginnen</CenterText>
@@ -60,7 +60,7 @@ const Content = styled.View`
   min-height: 70vh;
 `
 
-const TitleContainer = styled.View`
+const TopContainer = styled.View`
   flex: 0 0 33%;
   width: 70%;
   margin-top: 5rem;
