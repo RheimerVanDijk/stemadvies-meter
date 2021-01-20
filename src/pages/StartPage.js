@@ -57,7 +57,7 @@ const Content = styled.View`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 70%;
 `
 
 const TopContainer = styled.View`
