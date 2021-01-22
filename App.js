@@ -17,6 +17,7 @@ let customFonts = {
 // Pages
 import StartPage from "./src/pages/StartPage";
 import AboutPage from "./src/pages/AboutPage";
+import ResultPage from "./src/pages/ResultPage";
 
 const Stack = createStackNavigator();
 
@@ -44,6 +45,7 @@ export default function App() {
           options={{ gestureEnabled: false }}
         />
         <Stack.Screen name="AboutPage" component={AboutPage} />
+        <Stack.Screen name="ResultPage" component={ResultPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
