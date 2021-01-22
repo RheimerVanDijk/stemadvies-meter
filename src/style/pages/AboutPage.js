@@ -5,7 +5,6 @@ const Style = {
     container: {
       backgroundColor: "#BEECF9",
       height: "100%",
-      paddingTop: 50,
     },
   }),
 
@@ -19,62 +18,57 @@ const Style = {
     },
 
     titleContainer: {
-      borderBottomColor: "#025C7E",
-      borderBottomWidth: 3,
       marginBottom: 10,
+      marginRight: 120,
     },
 
     titleTextTop: {
-      fontSize: 14,
+      fontSize: 25,
       color: "#025C7E",
       fontFamily: "roboto-regular",
-    },
-
-    titleTextBottom: {
-      fontSize: 40,
-      color: "#025C7E",
-      fontFamily: "roboto-bold",
       fontWeight: "bold",
     },
 
-    helpContainer: {
+    backContainer: {
       borderBottomColor: "#025C7E",
-      borderBottomWidth: 1,
-      textAlign: "center",
-      marginBottom: 100,
+      textAlign: "left",
+      marginTop: 0,
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginRight: 280,
     },
 
-    helpText: {
-      fontSize: 16,
+    backText: {
+      fontSize: 20,
       color: "#025C7E",
       fontFamily: "roboto-regular",
     },
-
-    startTextContainer: {
-      marginBottom: 100,
+    
+    arrowLeft: {
+      width: 0,
+      height: 0, 
+      borderTopWidth: 20,
+      borderTopColor: "transparent",
+      borderBottomWidth: 20,
+      borderBottomColor: "transparent",
+      borderRightWidth: 20,
+      borderRightColor: "#025C7E",
+      marginRight: 10,
     },
 
-    startText: {
-      fontSize: 17,
+    mainTextContainer: {
+      marginBottom: 80,
+    },
+
+    mainText: {
+      fontSize: 25,
       color: "#025C7E",
       fontFamily: "roboto-regular",
-    },
-
-    startButtonCotainer: {},
-
-    startButton: {
-      width: 200,
-      height: 50,
-      backgroundColor: "#025C7E",
-      borderRadius: 20,
-      alignItems: "center",
-      justifyContent: "center",
-    },
-
-    startButtonText: {
-      fontFamily: "roboto-bold",
-      color: "#ffffff",
-      fontSize: 22,
+      marginRight: 25,
+      marginLeft: 25,
+      marginBottom: 20,
     },
   }),
 

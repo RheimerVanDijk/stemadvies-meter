@@ -26,7 +26,7 @@ export default function StartPage({ navigation }) {
           onPress={() => toAboutPage()}
         >
           <Text style={contentContainer.helpText}>
-            Meer weten over de stem wijzer? Klik hier
+            Meer weten over de stemwijzer? Klik hier!
           </Text>
         </TouchableOpacity>
         <View style={contentContainer.startTextContainer}>
