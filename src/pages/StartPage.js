@@ -52,51 +52,52 @@ const Content = styled.View`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 70%;
 `
 
 const TopContainer = styled.View`
   flex: 0 0 33%;
   width: 70%;
-  margin-top: 5rem;
+  margin-top: 100px;
 `
 
 const PreTitle = styled.Text`
-  font-size: 1.5rem;
+  font-size: 20px;
   color: #025c7e;
 `
 
 const Title = styled.Text`
-  font-size: 3rem;
+  font-size: 40px;
   color: #025c7e;
 `
 
 const AfterTitle = styled.Text`
   text-align: center;
   color: #025c7e;
+  font-size: 20px;
 `
 
 const CenterContainer = styled.View`
   width: 70%;
   flex: 0 0 33%;
-  margin-top: 5rem;
+  margin-top: 32px;
 `
 
 const CenterText = styled.Text`
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 27px;
   color: #025c7e;
 `
 
 const BottomContainer = styled.View`
   flex: 0 0 33%;
-  margin-top: 5rem;
+  margin-top: 32px;
 `
 
 const StartButton = styled.Text`
-  font-size: 1.5rem;
+  font-size: 30px;
   background: #025c7e;
-  padding: 1rem 2rem;
+  padding: 15px 30px;
   border-radius: 50px;
   color: #fefefe;
 `

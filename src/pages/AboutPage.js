@@ -38,13 +38,13 @@ export default function AboutPage({ navigation }) {
 
 const Wrapper = styled.View`
   background: #beecf9;
-  min-height: 100vh;
+  min-height: 100%;
 `
 
 const ToStartPageButton = styled.Text`
-  font-size: 1.5rem;
-  margin-top: 1.1rem;
-  margin-left: 1.1rem;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: 16px;
   color: #025c7e;
 `
 
@@ -54,34 +54,34 @@ const Content = styled.View`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 50px;
 `
 
 const TopContainer = styled.View`
   flex: 0 0 33%;
   width: 70%;
-  margin-top: 5rem;
+  margin-top: 50px;
 `
 
 const PreTitle = styled.Text`
-  font-size: 1.5rem;
+  font-size: 20px;
   color: #025c7e;
 `
 
 const Title = styled.Text`
-  font-size: 3rem;
+  font-size: 25px;
   color: #025c7e;
 `
 
 const CenterContainer = styled.View`
   width: 70%;
   flex: 0 0 33%;
-  margin-top: 5rem;
+  margin-top: 16px;
 `
 
 const CenterText = styled.Text`
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 16px;
   color: #025c7e;
 `
 
