@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native"
 
 const Style = {
   container: StyleSheet.create({
@@ -10,6 +10,7 @@ const Style = {
 
   contentContainer: StyleSheet.create({
     container: {
+      marginTop: 80,
       height: "70%",
       alignItems: "center",
       justifyContent: "center",
@@ -18,6 +19,7 @@ const Style = {
     },
 
     titleContainer: {
+      marginTop: 50,
       marginBottom: 10,
       marginRight: 120,
     },
@@ -35,8 +37,8 @@ const Style = {
       marginTop: 0,
       flex: 1,
       flexDirection: "row",
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: "center",
+      alignItems: "center",
       marginRight: 280,
     },
 
@@ -45,10 +47,10 @@ const Style = {
       color: "#025C7E",
       fontFamily: "roboto-regular",
     },
-    
+
     arrowLeft: {
       width: 0,
-      height: 0, 
+      height: 0,
       borderTopWidth: 20,
       borderTopColor: "transparent",
       borderBottomWidth: 20,
@@ -87,6 +89,6 @@ const Style = {
       aspectRatio: 1.3,
     },
   }),
-};
+}
 
-export default Style;
+export default Style
