@@ -108,24 +108,26 @@ export default function QuestionPage({ navigation }) {
       {
         loading == true && questionArray.length != 0 ?     
           <Wrapper>
-            <Progressbar current_question={currentQuestion} total_questions={questionArrayLength} prevQuestion={prevQuestion} nextQuestion={nextQuestion}></Progressbar>
-            
-            <QuestionContainer>
-              <QuestionText>
-                {questionArray[currentQuestion ].question}
-              </QuestionText> 
-              <ButtonContainer>
-                <TrueButton onPress={() => awnserQuestion(questionArray[currentQuestion].question_id, true)} underlayColor="rgba(59,230,132,0.3)">
-                  <ButtonText>Eens</ButtonText>
-                </TrueButton>
-                <UnButton onPress={() => awnserQuestion(questionArray[currentQuestion].question_id, undefined)} underlayColor="rgba(121,121,121,0.3)">
-                  <ButtonText>Geen van beide</ButtonText>
-                </UnButton>
-                <FalseButton onPress={() => awnserQuestion(questionArray[currentQuestion].question_id, false)} underlayColor="rgba(255,106,106,0.3)">
-                  <ButtonText>Oneens</ButtonText>
-                </FalseButton>
-              </ButtonContainer>
-            </QuestionContainer>
+            <Content>
+              <Progressbar current_question={currentQuestion} total_questions={questionArrayLength} prevQuestion={prevQuestion} nextQuestion={nextQuestion}></Progressbar>
+
+              <QuestionContainer>
+                <QuestionText>
+                  {questionArray[currentQuestion ].question}
+                </QuestionText> 
+                <ButtonContainer>
+                  <TrueButton onPress={() => awnserQuestion(questionArray[currentQuestion].question_id, true)} underlayColor="rgba(59,230,132,0.3)">
+                    <ButtonText>Eens</ButtonText>
+                  </TrueButton>
+                  <UnButton onPress={() => awnserQuestion(questionArray[currentQuestion].question_id, undefined)} underlayColor="rgba(121,121,121,0.3)">
+                    <ButtonText>Geen van beide</ButtonText>
+                  </UnButton>
+                  <FalseButton onPress={() => awnserQuestion(questionArray[currentQuestion].question_id, false)} underlayColor="rgba(255,106,106,0.3)">
+                    <ButtonText>Oneens</ButtonText>
+                  </FalseButton>
+                </ButtonContainer>
+              </QuestionContainer>
+            </Content>
             <FooterContainer>
               <FooterImage source={require("../../assets/background_image.jpg")} />
             </FooterContainer>
@@ -139,13 +141,17 @@ export default function QuestionPage({ navigation }) {
 const Wrapper = styled.View`
   height: 100%;
   background: #beecf9;
-  justify-content: space-between;
   padding-top: 30px;
 `
 
 const QuestionContainer = styled.View`
   padding: 0px 20px;
-  height: 400px;
+  justify-content: space-between;
+  height: 100%;
+`
+
+const Content = styled.View`
+  height: 50%;
   justify-content: space-between;
 `
 
@@ -153,6 +159,7 @@ const QuestionText = styled.Text`
   font-size: 20px;
   color: #025C7E;
   font-weight: bold;
+  margin-bottom: 50px;
 `
 
 const ButtonText = styled.Text`
@@ -193,7 +200,10 @@ const FalseButton = styled.TouchableHighlight`
 `
 
 const FooterContainer = styled.View`
-  flex: 0 0 33%;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 300px;
 `
 
 const FooterImage = styled.Image`

@@ -16,11 +16,13 @@ export default function StartPage({ navigation }) {
     <Wrapper>
       <Content>
         <TopContainer>
-          <PreTitle>Welkom bij de</PreTitle>
-          <Title>Stemwijzer</Title>
-          <TouchableOpacity onPress={() => toAboutPage()}>
+          <TitleContainer>
+            <PreTitle>Welkom bij de</PreTitle>
+            <Title>Stemwijzer</Title>
+          </TitleContainer>
+          <ToAboutButton onPress={() => toAboutPage()}>
             <AfterTitle>Wat is de stemwijzer?</AfterTitle>
-          </TouchableOpacity>
+          </ToAboutButton>
         </TopContainer>
 
         <CenterContainer>
@@ -28,11 +30,12 @@ export default function StartPage({ navigation }) {
         </CenterContainer>
 
         <BottomContainer>
-          <TouchableOpacity onPress={() => toQuestionPage()}>
-            <StartButton>Start de test!</StartButton>
-          </TouchableOpacity>
+          <StartButton onPress={() => toQuestionPage()}>
+            <StartButtonText>Start de test!</StartButtonText>
+          </StartButton>
         </BottomContainer>
       </Content>
+
 
       <FooterContainer>
         <FooterImage source={require("../../assets/background_image.jpg")} />
@@ -43,7 +46,7 @@ export default function StartPage({ navigation }) {
 
 const Wrapper = styled.View`
   background: #beecf9;
-  min-height: 100vh;
+  height: 100%;
 `
 
 const Content = styled.View`
@@ -52,58 +55,77 @@ const Content = styled.View`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  min-height: 70%;
+  width: 100%;
 `
 
 const TopContainer = styled.View`
-  flex: 0 0 33%;
-  width: 70%;
+  width: 100%;
   margin-top: 100px;
+  align-items: center
+  flex: 0 0 25%;
+`
+
+const TitleContainer = styled.View`
+  border-bottom-width: 3px;
+  border-bottom-color: #025c7e;
+  margin-bottom: 15px;
 `
 
 const PreTitle = styled.Text`
-  font-size: 20px;
+  font-size: 14px;
   color: #025c7e;
 `
 
 const Title = styled.Text`
   font-size: 40px;
   color: #025c7e;
+  font-weight: bold;
+
+`
+
+const ToAboutButton = styled.TouchableOpacity`
+  border-bottom-width: 1px;
+  border-bottom-color: #025c7e;
 `
 
 const AfterTitle = styled.Text`
   text-align: center;
   color: #025c7e;
-  font-size: 20px;
+  
 `
 
 const CenterContainer = styled.View`
   width: 70%;
-  flex: 0 0 33%;
-  margin-top: 32px;
 `
 
 const CenterText = styled.Text`
   text-align: center;
-  font-size: 27px;
+  font-size: 17px;
   color: #025c7e;
 `
 
 const BottomContainer = styled.View`
-  flex: 0 0 33%;
   margin-top: 32px;
 `
 
-const StartButton = styled.Text`
-  font-size: 30px;
+const StartButton = styled.TouchableOpacity`
   background: #025c7e;
-  padding: 15px 30px;
+  padding: 15px 60px;
   border-radius: 50px;
   color: #fefefe;
 `
 
+const StartButtonText = styled.Text`
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+`
+
 const FooterContainer = styled.View`
-  flex: 0 0 33%;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 300px;
 `
 
 const FooterImage = styled.Image`
