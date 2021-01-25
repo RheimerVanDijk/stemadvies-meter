@@ -36,7 +36,6 @@ export default function StartPage({ navigation }) {
         </BottomContainer>
       </Content>
 
-
       <FooterContainer>
         <FooterImage source={require("../../assets/background_image.jpg")} />
       </FooterContainer>
@@ -44,7 +43,7 @@ export default function StartPage({ navigation }) {
   )
 }
 
-const Wrapper = styled.View`
+const Wrapper = styled.ScrollView`
   background: #beecf9;
   height: 100%;
 `
@@ -61,7 +60,7 @@ const Content = styled.View`
 const TopContainer = styled.View`
   width: 100%;
   margin-top: 100px;
-  align-items: center
+  align-items: center;
   flex: 0 0 25%;
 `
 
@@ -80,7 +79,6 @@ const Title = styled.Text`
   font-size: 40px;
   color: #025c7e;
   font-weight: bold;
-
 `
 
 const ToAboutButton = styled.TouchableOpacity`
@@ -91,7 +89,6 @@ const ToAboutButton = styled.TouchableOpacity`
 const AfterTitle = styled.Text`
   text-align: center;
   color: #025c7e;
-  
 `
 
 const CenterContainer = styled.View`

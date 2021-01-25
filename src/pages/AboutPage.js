@@ -36,15 +36,15 @@ export default function AboutPage({ navigation }) {
   )
 }
 
-const Wrapper = styled.View`
+const Wrapper = styled.ScrollView`
   background: #beecf9;
   min-height: 100%;
 `
 
 const ToStartPageButton = styled.Text`
   font-size: 16px;
-  margin-top: 16px;
-  margin-left: 16px;
+  margin-top: 52px;
+  margin-left: 32px;
   color: #025c7e;
 `
 
@@ -59,17 +59,19 @@ const Content = styled.View`
 
 const TopContainer = styled.View`
   flex: 0 0 33%;
-  width: 70%;
+  width: 100%;
   margin-top: 50px;
 `
 
 const PreTitle = styled.Text`
+  text-align: center;
   font-size: 20px;
   color: #025c7e;
 `
 
 const Title = styled.Text`
   font-size: 25px;
+  text-align: center;
   color: #025c7e;
 `
 
@@ -77,6 +79,7 @@ const CenterContainer = styled.View`
   width: 70%;
   flex: 0 0 33%;
   margin-top: 16px;
+  text-align: center;
 `
 
 const CenterText = styled.Text`
