@@ -1,50 +1,95 @@
-import React from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
-
-import Style from "../style/pages/AboutPage.js";
-
-const container = Style.container;
-const contentContainer = Style.contentContainer;
-const imageContainer = Style.imageContainer;
-
-import backgroundImage from "../../assets/background_image.jpg";
+import React from "react"
+import { Text, View, Image, TouchableOpacity } from "react-native"
+import styled from "styled-components/native"
 
 export default function AboutPage({ navigation }) {
   function toStartPage() {
-    navigation.navigate("StartPage");
+    navigation.navigate("StartPage")
   }
 
   return (
-    <View style={container.container}>
-      <View style={contentContainer.container}>
-        <TouchableOpacity
-          style={contentContainer.backContainer}
-          onPress={() => toStartPage()}
-        >
-          <Text style={contentContainer.arrowLeft}>
-          </Text>
-          <Text style={contentContainer.backText}>
-            Terug
-          </Text>
-        </TouchableOpacity>
+    <Wrapper>
+      <TouchableOpacity onPress={() => toStartPage()}>
+        <ToStartPageButton>&#8592; Terug</ToStartPageButton>
+      </TouchableOpacity>
+      <Content>
+        <TopContainer>
+          <PreTitle>Wat is de</PreTitle>
+          <Title>Stemwijzer?</Title>
+        </TopContainer>
 
-        <View style={contentContainer.titleContainer}>
-          <Text style={contentContainer.titleTextTop}>Wat is de stemwijzer?</Text>
-        </View>
-        
-        <View style={contentContainer.mainTextContainer}>
-          <Text style={contentContainer.mainText}>
-            De stemwijzer is een app waarmee u word geholpen om te bepalen welke politiekepartij het beste bij u past.
-          </Text>
-          <Text style={contentContainer.mainText}>
-            Dit word gedaan door een aantal vragen te beantwoorden, nadat u deze vragen heeft beantwoord krijgt u een resultaat terug met politieke partijen die bij u passen.
-          </Text>
-        </View>
+        <CenterContainer>
+          <CenterText>
+            De stemwijzer is een app waarmee u word geholpen om te bepalen welke
+            politiekepartij het beste bij u past. Dit word gedaan door een
+            aantal vragen te beantwoorden, na dat u deze vragen heeft beantwoord
+            krijgt u een resultaat terug met politieke partijen die bij u
+            passen.
+          </CenterText>
+        </CenterContainer>
+      </Content>
 
-      </View>
-      <View style={imageContainer.container}>
-        <Image style={imageContainer.image} source={backgroundImage}></Image>
-      </View>
-    </View>
-  );
+      <FooterContainer>
+        <FooterImage source={require("../../assets/background_image.jpg")} />
+      </FooterContainer>
+    </Wrapper>
+  )
 }
+
+const Wrapper = styled.View`
+  background: #beecf9;
+  min-height: 100%;
+`
+
+const ToStartPageButton = styled.Text`
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: 16px;
+  color: #025c7e;
+`
+
+const Content = styled.View`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 50px;
+`
+
+const TopContainer = styled.View`
+  flex: 0 0 33%;
+  width: 70%;
+  margin-top: 50px;
+`
+
+const PreTitle = styled.Text`
+  font-size: 20px;
+  color: #025c7e;
+`
+
+const Title = styled.Text`
+  font-size: 25px;
+  color: #025c7e;
+`
+
+const CenterContainer = styled.View`
+  width: 70%;
+  flex: 0 0 33%;
+  margin-top: 16px;
+`
+
+const CenterText = styled.Text`
+  text-align: justify;
+  font-size: 16px;
+  color: #025c7e;
+`
+
+const FooterContainer = styled.View`
+  flex: 0 0 33%;
+`
+
+const FooterImage = styled.Image`
+  width: 100%;
+  height: 100%;
+`
