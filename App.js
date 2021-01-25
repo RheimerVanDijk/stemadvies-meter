@@ -48,7 +48,7 @@ export default function App() {
         <Stack.Screen name="QuestionPage" component={QuestionPage} />
 
         <Stack.Screen name="AboutPage" component={AboutPage} />
-        <Stack.Screen name="ResultPage" component={ResultPage}></Stack.Screen>
+        <Stack.Screen name="ResultPage" component={ResultPage} />
       </Stack.Navigator>
     </NavigationContainer>
   )
