@@ -8,19 +8,14 @@ export default function ResultPage({route, navigation}) {
     navigation.navigate("StartPage")
   }
 
-  const XYPoint = 1; // Temporary
-
   const FirstParty = route["params"]["top3Parties"][0];
-  const FirstPartyPercentage = (XYPoint / FirstParty["distance"] * 100).toFixed(0);
-  //const FirstPartyPercentage = 100 - FirstPartyCalc;
+  const FirstPartyPercentage = parseFloat(FirstParty["distancePercent"]).toFixed(0);
 
   const SecondParty = route["params"]["top3Parties"][1];
-  const SecondPartyPercentage = (XYPoint / SecondParty["distance"] * 100).toFixed(0);
-  //const SecondPartyPercentage = 100 - SecondPartyCalc;
+  const SecondPartyPercentage = parseFloat(SecondParty["distancePercent"]).toFixed(0);
 
   const ThirdParty = route["params"]["top3Parties"][2];
-  const ThirdPartyPercentage = (XYPoint / ThirdParty["distance"] * 100).toFixed(0);
-  //const ThirdPartyPercentage = 100 - ThirdPartyCalc;
+  const ThirdPartyPercentage = parseFloat(ThirdParty["distancePercent"]).toFixed(0);
 
   console.log(route["params"]);
 
