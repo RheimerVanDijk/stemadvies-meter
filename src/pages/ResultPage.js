@@ -10,12 +10,15 @@ export default function ResultPage({route, navigation}) {
 
   const FirstParty = route["params"]["top3Parties"][0];
   const FirstPartyPercentage = parseFloat(FirstParty["distancePercent"]).toFixed(0);
+  const FirstPartyImage = FirstParty["image"];
 
   const SecondParty = route["params"]["top3Parties"][1];
   const SecondPartyPercentage = parseFloat(SecondParty["distancePercent"]).toFixed(0);
+  const SecondPartyImage = SecondParty["image"];
 
   const ThirdParty = route["params"]["top3Parties"][2];
   const ThirdPartyPercentage = parseFloat(ThirdParty["distancePercent"]).toFixed(0);
+  const ThirdPartyImage = ThirdParty["image"];
 
   console.log(route["params"]);
 
@@ -27,14 +30,17 @@ export default function ResultPage({route, navigation}) {
         </TitleContainer>
         <PartiesContainer>
           <PartyContainer>
+            <Image style={{resizeMode: "contain"}} source={FirstPartyImage} />
             <PartyName>{FirstParty["politicParty"]}</PartyName>
             <PartyPercentage>{FirstPartyPercentage}%</PartyPercentage>
           </PartyContainer>
           <PartyContainer>
+          <Image style={{resizeMode: "contain"}} source={SecondPartyImage} />
             <PartyName>{SecondParty["politicParty"]}</PartyName>
             <PartyPercentage>{SecondPartyPercentage}%</PartyPercentage>
           </PartyContainer>
           <PartyContainer>
+          <Image style={{resizeMode: "contain"}} source={ThirdPartyImage} />
             <PartyName>{ThirdParty["politicParty"]}</PartyName>
             <PartyPercentage>{ThirdPartyPercentage}%</PartyPercentage>
           </PartyContainer>
@@ -60,12 +66,11 @@ const Wrapper = styled.View`
 `
 
 const Content = styled.View`
-  height: 50%;
+  height: 70%;
   justify-content: space-between;
 `
 
 const TitleContainer = styled.View`
-  margin-bottom: 15px;
   margin-left: 10px;
 `
 
@@ -85,9 +90,11 @@ const PartiesContainer = styled.View`
 `
 
 const PartyContainer = styled.View`
-  margin-bottom: 15px;
+  margin-bottom: 80px;
   display: flex;
   align-items: center;
+  width: 100%;
+  height: auto;
 `
 
 const PartyName = styled.Text`
@@ -99,6 +106,11 @@ const PartyName = styled.Text`
 const PartyPercentage = styled.Text`
   font-size: 25px;
   color: #025c7e;
+`
+
+const Image = styled.Image`
+  height: 100%;
+  width: 100%;
 `
 
 const ButtonContainer = styled.View`
